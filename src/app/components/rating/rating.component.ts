@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-rating',
   standalone: true,
-  imports: [CommonModule, NgbRatingModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './rating.component.html',
   styleUrl: './rating.component.css',
 })
 export class RatingComponent {
-  currentRate: number = 4;
+  @Input()
+  currentRate: number = 0;
+  rateArray: any = [0, 1, 2, 3, 4];
 }

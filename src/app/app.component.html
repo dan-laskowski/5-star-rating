@@ -1,1 +1,14 @@
-<app-rating />
+<section class="app-wrapper">
+  <label for="rating-input">
+    Podaj ocenę:
+    <input
+      id="rating-input"
+      type="number"
+      step="0.5"
+      min="0"
+      max="5"
+      [(ngModel)]="rating"
+    />
+    <app-rating [currentRate]="rating" />
+  </label>
+</section>
